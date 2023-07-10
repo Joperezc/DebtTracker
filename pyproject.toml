@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "DebtTracker"
+version = "2.0.0"
+description = "A Simple Debt Tracker for personal use"
+dependencies = [
+    'setuptools',
+    'pyqt5-tools',
+    'PyQt5'
+]
+
+[project.scripts]
+run = "main:main"
