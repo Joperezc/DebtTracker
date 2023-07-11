@@ -24,6 +24,7 @@
 1. use the command ```pip install -e .``` to install
    the program as a package
 2. run with ```run``` in the installed directory
+2.5. Virtual Environment reccomended ```python3 venv <env name>```
     
 # Known Bugs
 * Problems with closing some windows without filling in information
