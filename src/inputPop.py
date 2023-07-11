@@ -11,10 +11,12 @@ class Ui_Form(object):
     textDate = ""
     qt5Date = ""
     state = 0
+    closedBefore = 0
 
     def setupUi(self, Form):
         Form.setObjectName("Form")
         Form.resize(415, 347)
+        
         self.label = QtWidgets.QLabel(Form)
         self.label.setGeometry(QtCore.QRect(10, 0, 171, 51))
         font = QtGui.QFont()
@@ -48,7 +50,10 @@ class Ui_Form(object):
         font = QtGui.QFont()
         font.setFamily("Bell MT")
         font.setPointSize(12)
-        self.label_5.setFont(font)
+        font2 = QtGui.QFont()
+        font2.setFamily("Bell MT")
+        font2.setPointSize(11)
+        self.label_5.setFont(font2)
         self.label_5.setObjectName("label_5")
         self.textEdit = QtWidgets.QTextEdit(Form)
         self.textEdit.setGeometry(QtCore.QRect(180, 10, 211, 31))
@@ -76,11 +81,11 @@ class Ui_Form(object):
     def retranslateUi(self, Form):
         _translate = QtCore.QCoreApplication.translate
         Form.setWindowTitle(_translate("Form", "Form"))
-        self.label.setText(_translate("Form", "Nombre de Deuda"))
-        self.label_2.setText(_translate("Form", "Cantidad"))
-        self.label_3.setText(_translate("Form", "Pago Mensual"))
-        self.label_4.setText(_translate("Form", "Interes"))
-        self.label_5.setText(_translate("Form", "Fecha de Pago"))
+        self.label.setText(_translate("Form", "Debt Name"))
+        self.label_2.setText(_translate("Form", "Amount"))
+        self.label_3.setText(_translate("Form", "Monthly Payment"))
+        self.label_4.setText(_translate("Form", "Interest"))
+        self.label_5.setText(_translate("Form", "Date of Next Payment"))
         self.pushButton.setText(_translate("Form", "OK"))
 
     def onClick(self, Form):

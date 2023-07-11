@@ -91,7 +91,7 @@ class Ui_MainWindow(object):
         self.menuNew.setTitle(_translate("MainWindow", "New"))
         self.actionSave.setText(_translate("MainWindow", "Save"))
         self.actionSave_as.setText(_translate("MainWindow", "Save as"))
-        self.actionNew.setText(_translate("MainWindow", "Nueva Deuda"))
+        self.actionNew.setText(_translate("MainWindow", "New Entry"))
 
     def addDebtDialog(self):
 
@@ -99,7 +99,26 @@ class Ui_MainWindow(object):
         self.ui = inputPop()
         self.ui.setupUi(self.window)
         self.window.exec_()
+        if(self.ui.name == "" and self.ui.total == "" and self.ui.monthPay == 0 and self.ui.interest == "" and self.ui.textDate == ""):
+            return
+        try:
+            int(self.ui.total)
+        except:
+            print("string instead of num")
+            return
+        try:
+            int(self.ui.monthPay)
+        except:
+            print("string instead of num")
+            return
+        try:
+            int(self.ui.interest)
+        except:
+            print("string instead of num")
+            return
+
         self.addDebtWidget(self.ui.name, self.ui.total, self.ui.monthPay, self.ui.interest, self.ui.textDate, False)
+        
         
     def addDebtWidget(self, name, total, monthlyPay, interest, date, load):
         debt1 = debtItm()

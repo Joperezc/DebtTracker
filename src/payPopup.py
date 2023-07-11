@@ -30,8 +30,8 @@ class Ui_Form(object):
     def retranslateUi(self, Form):
         _translate = QtCore.QCoreApplication.translate
         Form.setWindowTitle(_translate("Form", "Form"))
-        self.label.setText(_translate("Form", "Cuanto Desea Pagar: "))
-        self.pushButton.setText(_translate("Form", "Pagar"))
+        self.label.setText(_translate("Form", "How much is being payed?: "))
+        self.pushButton.setText(_translate("Form", "Pay"))
     
     def paySubmit(self, Form):
         self.amountPaid = self.textEdit.toPlainText()
